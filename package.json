@@ -1,0 +1,30 @@
+{
+  "name": "think-think.github.io",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/think-think/think-think.github.ui",
+  "author": "Juan Manuel Garcia Junco Moreno <cokenrocknroll@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^7.1.1",
+    "browser-sync": "^2.18.12",
+    "cssnano": "^3.10.0",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^3.3.0",
+    "gulp-postcss": "^7.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "panini": "^1.4.0",
+    "require-dir": "^0.3.2"
+  },
+  "scripts": {
+    "clean": "gulp clean",
+    "gulp": "gulp",
+    "start": "NODE_ENV=development gulp start"
+  },
+  "dependencies": {
+    "flexboxgrid": "^6.3.1",
+    "sanitize.css": "^5.0.0"
+  }
+}

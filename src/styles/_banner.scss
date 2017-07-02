@@ -1,0 +1,15 @@
+.banner {
+  background: 
+    linear-gradient(
+      0deg,
+      $banner-gradient-color,
+      $banner-gradient-color
+    ),
+    url("../images/banner.jpg")
+    center center no-repeat fixed;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
