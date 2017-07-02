@@ -7,8 +7,6 @@ const concat = require('gulp-concat')
 const sourcemaps = require('gulp-sourcemaps')
 const gulpConfig = require('../config')
 
-console.log(JSON.stringify(gulpConfig, null, 2))
-
 gulp.task('styles', () => {
   const plugins = [
     autoprefixer({
