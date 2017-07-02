@@ -20,7 +20,8 @@ gulp.task('serve', ['watch'], () => {
 
 gulp.task('watch', ['build'], () => {
   gulp.watch(['src/styles/*.scss'], ['styles'])
-  gulp.watch(['src/{layouts,partials}/**/*.*'], panini.refresh)
+  gulp.watch(['src/pages/**/*'], ['pages'])
+  gulp.watch(['src/{layouts,partials}/**/*'], panini.refresh)
   gulp.watch([`public/**/*.*`], browserSync.reload)
 })
 
