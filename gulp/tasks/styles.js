@@ -4,6 +4,7 @@ const postcss = require('gulp-postcss')
 const autoprefixer = require('autoprefixer')
 const cssnano = require('cssnano')
 const concat = require('gulp-concat')
+const sourcemaps = require('gulp-sourcemaps')
 const gulpConfig = require('../config')
 
 console.log(JSON.stringify(gulpConfig, null, 2))
@@ -17,11 +18,18 @@ gulp.task('styles', () => {
 
   if (gulpConfig.env.prod) {
     plugins.push(cssnano({ zindex: false }))
+    
+    return gulp.src(gulpConfig.stylesSource)
+      .pipe(sass().on('error', console.log))
+      .pipe(postcss(plugins))
+      .pipe(gulp.dest(gulpConfig.stylesDest))
   }
 
   return gulp.src(gulpConfig.stylesSource)
+    .pipe(sourcemaps.init())
     .pipe(sass().on('error', console.log))
     .pipe(postcss(plugins))
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest(gulpConfig.stylesDest))
 })
 
