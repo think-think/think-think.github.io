@@ -15,7 +15,7 @@ gulp.task('styles', () => {
     }),
   ]
 
-  if (gulpConfig.prod) {
+  if (gulpConfig.env.prod) {
     plugins.push(cssnano({ zindex: false }))
   }
 

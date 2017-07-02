@@ -5,7 +5,7 @@ const gulpConfig = require('../config')
 gulp.task('assets:images', () => {
   let stream = gulp.src(gulpConfig.imagesSource)
 
-  if (gulpConfig.prod) {
+  if (gulpConfig.env.prod) {
     stream = stream.pipe(imagemin())
   }
 
